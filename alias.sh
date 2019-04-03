@@ -44,3 +44,5 @@ alias iotop='sudo iotop'
 alias iftop='sudo iftop'
 alias powertop='sudo powertop'
 alias c='clear'
+alias dn='/dev/null'
+

@@ -6,7 +6,7 @@ import os
 import re
 
 for html in [open(x).read() for x in glob('*.html')]:
-	for mag_link in [link for link in [a['href'] for a in BS(html).find_all('a')] if link[:6] == 'magnet']:
+	for mag_link in [link for link in [a['href'] for a in BS(html, features="html.parser").find_all('a')] if link[:6] == 'magnet']:
 		command = "transmission-remote -a '%s'" % mag_link
 		pprint(command)
 		os.popen(command).read()

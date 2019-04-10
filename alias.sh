@@ -2,6 +2,7 @@
 alias c='clear'
 alias dcdv='docker-compose down -v'
 alias dcp='docker cp'
+alias dka='docker ps -q | xargs docker kill'
 alias di='docker images'
 alias dl='docker logs'
 alias dn='/dev/null'
